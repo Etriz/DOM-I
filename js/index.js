@@ -48,4 +48,20 @@ navLinks[3].textContent=siteContent['nav']['nav-item-4']
 navLinks[4].textContent=siteContent['nav']['nav-item-5']
 navLinks[5].textContent=siteContent['nav']['nav-item-6']
 // navLinks.forEach(item=>item.textContent=Object.values(siteContent['nav']))
+const ctaText=document.getElementsByClassName("cta-text")
+ctaText[0].firstElementChild.textContent=siteContent['cta']['h1']
+ctaText[0].lastElementChild.textContent=siteContent['cta']['button']
+const ctaImg=document.getElementById("cta-img")
+ctaImg.setAttribute('src', siteContent['cta']["img-src"])
+const textContent = document.getElementsByClassName("text-content")
+textContent[0].firstElementChild.textContent=siteContent['main-content']["features-h4"]
+textContent[0].lastElementChild.textContent=siteContent['main-content']["features-content"]
+textContent[1].firstElementChild.textContent=siteContent['main-content']["about-h4"]
+textContent[1].lastElementChild.textContent=siteContent['main-content']["about-content"]
+textContent[2].firstElementChild.textContent=siteContent['main-content']["services-h4"]
+textContent[2].lastElementChild.textContent=siteContent['main-content']["services-content"]
+textContent[3].firstElementChild.textContent=siteContent['main-content']["product-h4"]
+textContent[3].lastElementChild.textContent=siteContent['main-content']["product-content"]
+textContent[4].lastElementChild.textContent=siteContent['main-content']["vision-content"]
+textContent[4].firstElementChild.textContent=siteContent['main-content']["vision-h4"]
 

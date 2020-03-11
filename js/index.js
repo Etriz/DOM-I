@@ -41,12 +41,22 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 const navLinks=document.querySelectorAll('a')
+navLinks.forEach(item=>item.style.color='green')
 navLinks[0].textContent=siteContent['nav']['nav-item-1']
 navLinks[1].textContent=siteContent['nav']['nav-item-2']
 navLinks[2].textContent=siteContent['nav']['nav-item-3']
 navLinks[3].textContent=siteContent['nav']['nav-item-4']
 navLinks[4].textContent=siteContent['nav']['nav-item-5']
 navLinks[5].textContent=siteContent['nav']['nav-item-6']
+const nav=document.getElementsByTagName('nav')
+const firstLink=document.createElement('a')
+firstLink.textContent="FirstLink"
+firstLink.style.color='green'
+nav[0].prepend(firstLink)
+const lastLink=document.createElement('a')
+lastLink.textContent="LastLink"
+lastLink.style.color='green'
+nav[0].appendChild(lastLink)
 // navLinks.forEach(item=>item.textContent=Object.values(siteContent['nav']))
 const ctaText=document.getElementsByClassName("cta-text")
 ctaText[0].firstElementChild.textContent=siteContent['cta']['h1']

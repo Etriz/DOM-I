@@ -84,3 +84,24 @@ contactChildren[2].textContent=siteContent['contact']["phone"]
 contactChildren[3].textContent=siteContent['contact']["email"]
 const footer=document.getElementsByTagName('footer')
 footer[0].firstElementChild.textContent=siteContent['footer']["copyright"]
+
+const stretchButton=document.createElement('button')
+const body=document.getElementsByTagName('body')
+stretchButton.textContent="Stretch Button"
+ctaText[0].appendChild(stretchButton)
+const stretchClick =()=>{
+  const startText=siteContent['cta']['h1']
+  if(stretchButton.textContent==='Stretch Button'){
+    stretchButton.textContent="Test Complete"
+    stretchButton.style.background="black"
+    stretchButton.style.color="#bada55"
+    ctaText[0].firstElementChild.textContent='This Is Only A Test'
+  }
+  else{
+    stretchButton.textContent="Stretch Button"
+    stretchButton.style.background="white"
+    stretchButton.style.color="black"
+    ctaText[0].firstElementChild.textContent=startText
+  }
+}
+stretchButton.addEventListener('click', stretchClick)

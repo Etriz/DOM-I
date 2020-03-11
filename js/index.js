@@ -64,4 +64,13 @@ textContent[3].firstElementChild.textContent=siteContent['main-content']["produc
 textContent[3].lastElementChild.textContent=siteContent['main-content']["product-content"]
 textContent[4].lastElementChild.textContent=siteContent['main-content']["vision-content"]
 textContent[4].firstElementChild.textContent=siteContent['main-content']["vision-h4"]
-
+const middleImg=document.getElementById('middle-img')
+middleImg.setAttribute('src',siteContent['main-content']["middle-img-src"])
+const contact=document.getElementsByClassName('contact')
+const contactChildren=contact[0].children
+contactChildren[0].textContent=siteContent['contact']["contact-h4"]
+contactChildren[1].textContent=siteContent['contact']["address"]
+contactChildren[2].textContent=siteContent['contact']["phone"]
+contactChildren[3].textContent=siteContent['contact']["email"]
+const footer=document.getElementsByTagName('footer')
+footer[0].firstElementChild.textContent=siteContent['footer']["copyright"]
